@@ -196,8 +196,11 @@ main{
 .articles{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap:0px 20px;
 }
 footer{
+    box-sizing: border-box;
     padding: 55px 115px;
     background-color: hsl(233, 26%, 24%);
     display: flex;
@@ -243,4 +246,141 @@ footer > *:last-child{
 .copy-right{
     color:hsl(233, 8%, 62%);
     margin-top:35px;
+}
+@media screen and (max-width:1410px) {
+    header,.secondSection,.lastSection,footer{
+        padding-left:45px;
+        padding-right: 45px;
+    }
+    .mainText{
+        left:45px;
+        width:375px;
+    }
+}
+@media screen and (max-width:1075px){
+    .mainBackground{
+        top:-250px;
+        left: 0;
+        background-image: url('images/bg-intro-mobile.svg');
+        
+    }
+    .mokup{
+        width: 95%;
+        height: auto;
+        position: absolute;
+        top:-10%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .firstSection{
+        display: block;
+        height:1250px;
+    }
+    .mainText{
+        width:95%;
+        max-width:450px;
+        display: block;
+        top:70%;
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .headerItems,nav .mainButton{
+        display: none;
+    }
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px 0;
+    }
+    footer ul{
+        margin-block: unset;
+        padding: 0;
+    }
+    footer > *{
+        margin:unset !important;
+        align-items: center !important;
+        justify-content: center;
+        width: 90%;
+        max-width:350px;
+    }
+}
+@media screen and (max-width:880px){
+    .mokup{
+        top:-5%;
+    }
+}
+@media screen and (max-width:775px){
+    .mainBackground{
+        top:-350px;
+        left:0px;
+        background-image: url('images/bg-intro-mobile.svg');
+        
+    }
+    .mokup{
+        top:-7%;
+    }
+    .firstSection{
+        height:1100px;
+    }
+    .mainText{
+        width:95%;
+        max-width:450px;
+        top:650px;
+    }
+}
+@media screen and (max-width:685px){
+    .mokup{
+        top:-75px;
+    }
+    .firstSection{
+        height:1100px;
+    }
+    .mainText{
+        width:95%;
+        max-width:450px;
+        top:700px;
+        position: absolute;
+    }
+    .articles,.features{
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading,.headingtext{
+        text-align: center;
+    }
+    .feature{
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+    .article,.feature{
+        width: 100%;
+        max-width: 400px;
+    }
+    header,.secondSection,.lastSection,footer{
+        padding-left:15px;
+        padding-right:15px;
+    }
+}
+@media screen and (max-width:565px){
+    .mokup{
+        top:60px;
+    }
+}
+@media screen and (max-width:425px){
+    .mokup{
+        top:-65px;
+    }
+    .firstSection{
+        height:900px;
+    }
+    .mainText{
+        width:95%;
+        max-width:450px;
+        top:475px;
+        position: absolute;
+    }
 }
