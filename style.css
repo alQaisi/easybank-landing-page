@@ -20,10 +20,11 @@ body{
 header{
     background-color: white;
     box-sizing: border-box;
-    padding: 25px 150px;
+    padding: 25px 115px;
     position:fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 100;
 }
 header nav{
@@ -50,7 +51,7 @@ li{
     background: linear-gradient(to left,hsl(192, 70%, 51%),hsl(136, 65%, 51%));
     bottom:-40px;
     width: 100%;
-    height:5px;
+    height:6px;
     margin: 0 auto;
     transform: scale(0);
     transition: transform .35s ease-in-out;
@@ -81,13 +82,12 @@ button:hover{
     align-items: center;
     background-color: white;
     box-sizing: border-box;
-    padding: 0px 0px 0px 150px;
     height:740px;
 }
 
 .mainBackground{
     position: relative;
-    left:35%;
+    left:40%;
     margin-left: auto;
     background-image: url('images/bg-intro-desktop.svg');
     background-position:center;
@@ -105,14 +105,14 @@ button:hover{
 }
 .mainText{
     position: absolute;
-    left:150px;
+    left:115px;
     top:225px;
     width:450px;
 }
 .mainText h1{
     font-size: 2.35rem;
 }
-.mainText h1,.secondSection h1{
+.mainText h1,.secondSection h1,.feature h2,.lastSection h1,.title{
     color: hsl(233, 26%, 24%);
     font-weight: 400;
 }
@@ -129,8 +129,118 @@ main{
 }
 .secondSection{
     box-sizing: border-box;
-    padding: 75px 150px 50px;
+    padding: 125px 115px 50px;
 }
 .secondSection p{
     max-width:650px;
+}
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin:65px auto 0px;
+}
+.feature{
+    width:295px;
+    margin:35px 0;
+}
+.feature h2{
+    margin-block:30px;
+    font-weight: 300;
+}
+.feature p{
+    font-weight:300;
+}
+.lastSection{
+    background-color: white;
+    box-sizing: border-box;
+}
+.lastSection{
+    padding:50px 115px 65px;
+}
+.article{
+    box-sizing: border-box;
+    width:95%;
+    max-width: 280px;
+    margin:25px 0;
+}
+.article img{
+    width: 100%;
+    height: auto;
+    max-height: 175px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.article-body{
+    width:90%;
+    margin: 35px auto 0px;
+}
+.author{
+    color: hsl(233, 8%, 62%);
+    font-size: .8rem;
+}
+.article-text{
+    color: hsl(233, 8%, 62%);
+    font-size: .85rem;
+    line-height: 22px;
+}
+.title{
+    margin-block:15px;
+    cursor: pointer;
+    transition: color .25s ease;
+}
+.title:hover{
+    color: hsl(136, 65%, 51%);
+}
+.articles{
+    display: flex;
+    justify-content: space-between;
+}
+footer{
+    padding: 55px 115px;
+    background-color: hsl(233, 26%, 24%);
+    display: flex;
+    justify-content:flex-start;
+    gap: 0 75px;
+    align-items:flex-start;
+}
+footer ul{
+    margin: unset;
+    gap: 20px 0;
+}
+footer ul li{
+    color: hsl(220, 16%, 96%);
+}
+footer ul li:hover{
+    color: hsl(136, 65%, 51%);
+}
+footer > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: fit-content;
+}
+footer > *:last-child{
+    margin-left: auto;
+    align-items: flex-end;
+}
+.footer-logo path:last-of-type{
+    fill: white;
+}
+
+.social svg:hover path{
+    fill: hsl(136, 65%, 51%);
+}
+.social svg{
+    margin: 0 6px;
+    cursor: pointer;
+}
+.social{
+    margin-top:55px;
+}
+.copy-right{
+    color:hsl(233, 8%, 62%);
+    margin-top:35px;
 }
