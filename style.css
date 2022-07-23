@@ -17,6 +17,10 @@ body{
     min-height: 100vh;
     background-color: hsl(220, 16%, 96%);
 }
+body,header{
+    max-width: 1920px;
+    margin: 0 auto;
+}
 header{
     background-color: white;
     box-sizing: border-box;
