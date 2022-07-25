@@ -4,7 +4,6 @@ const overlay=document.querySelector(".overlay");
 menuIcon.addEventListener("click",function(evt){
     if(overlay.classList.contains("hidden"))
         overlay.classList.remove("hidden");
-    console.log(evt.target.alt)    
     toggleMenu(evt.target.alt)
 });
 
